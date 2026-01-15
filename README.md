@@ -2,6 +2,18 @@
 
 一個整合待產知識學習與 AI 智慧問答的產婦衛教平台，提供完整的使用者學習追蹤功能。
 
+## 🔗 重要連結
+
+| 類別 | 連結 | 說明 |
+|------|------|------|
+| 🌐 **線上 Demo** | [待部署](https://maternal-ai-platform.vercel.app) | 部署完成後可訪問 |
+| 💻 **GitHub 倉庫** | [maternal-ai-platform](https://github.com/ChatGPT3a01/maternal-ai-platform) | 原始碼與文件 |
+| 📊 **追蹤資料表** | [Google Sheets](https://docs.google.com/spreadsheets/d/1x49JHHsD_pSXQ9v8J2KLugcstJxz1Y5koj3on8x5Fks/edit) | 使用者行為追蹤數據 |
+| 📝 **前測問卷** | [Google Forms](https://docs.google.com/forms/d/1pWj9TwGCWUt0cZGmtGdVg2iITi7bbpKc6dXhwyi3qRw/viewform) | 學習前評估 |
+| 📝 **後測問卷** | [Google Forms](https://docs.google.com/forms/d/1dwJhVsQFOEuR18w3wKZn8Z3Nu4td4OXuPnC_HMFQVZc/viewform) | 學習後評估 |
+| 📖 **完整設置指南** | [SETUP_GUIDE.md](docs/SETUP_GUIDE.md) | 詳細安裝與部署教學 |
+| 🔧 **Apps Script** | [google-apps-script.js](docs/google-apps-script.js) | 追蹤系統後端程式碼 |
+
 ## 專案特色
 
 - 📚 **完整知識庫**：涵蓋待產注意事項、產兆辨識、產程進展、減痛方法等資訊
