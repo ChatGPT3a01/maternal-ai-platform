@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "predeploy": "npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out -t true"
+    "deploy": "gh-pages -d out -t"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
