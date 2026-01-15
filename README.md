@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤱 產婦 AI 問答平台
+# 🤱 產婦知識平台
 ### Baby Landing - Maternal AI Knowledge Platform
 
 <p align="center">
@@ -32,7 +32,7 @@
 </p>
 
 <p align="center">
-  <strong>👆 點擊上方按鈕，體驗完整的產婦 AI 問答平台功能</strong>
+  <strong>👆 點擊上方按鈕，體驗完整的產婦知識平台功能</strong>
 </p>
 
 </div>
