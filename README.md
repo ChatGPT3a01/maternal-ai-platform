@@ -480,33 +480,87 @@ location.reload();
 
 ---
 
-## 📄 授權
+## 👨‍🏫 作者資訊
 
-此專案僅供**研究和教育用途**使用。
+<div align="center">
+
+<table>
+<tr>
+<td width="50%">
+
+### 阿亮老師
+
+**職務**
+- 🎓 國立臺灣科技大學 數位學習與教育研究所 博士生
+- 👨‍🏫 臺北市國小教師
+
+</td>
+<td width="50%">
+
+### 獲獎紀錄
+
+- 🏆 2024 教育部教學實踐研究計畫 特優獎
+- 🥇 2024 GreaTeach 全國創意教學獎 特優
+- 🥈 2024 台北市資訊科技教育成果發表 優等
+- 🥉 2023 親子天下教育創新 100
+
+</td>
+</tr>
+</table>
+
+### 📱 聯絡方式
+
+<p align="center">
+  <a href="https://www.youtube.com/@Liang-yt02">
+    <img src="https://img.shields.io/badge/YouTube-阿亮老師-red?style=for-the-badge&logo=youtube" alt="YouTube">
+  </a>
+  <a href="https://www.facebook.com/groups/2754139931432955">
+    <img src="https://img.shields.io/badge/Facebook-3A科技研究社-blue?style=for-the-badge&logo=facebook" alt="Facebook">
+  </a>
+  <a href="mailto:3a01chatgpt@gmail.com">
+    <img src="https://img.shields.io/badge/Email-3a01chatgpt@gmail.com-green?style=for-the-badge&logo=gmail" alt="Email">
+  </a>
+</p>
+
+<img src="作者資訊.png" alt="阿亮老師" width="600">
+
+</div>
 
 ---
 
-## 🤝 貢獻
+## 📄 授權聲明
 
-歡迎提交 Issue 或 Pull Request 來改進這個專案！
+<div align="center">
 
----
+**© 2026 阿亮老師 版權所有**
 
-## 📞 聯絡資訊
+本專案僅供**阿亮老師課程學員**學習使用。
 
-如有任何問題或建議，歡迎透過以下方式聯繫：
+### ⚠️ 禁止事項
 
-- 📧 GitHub Issues: [提交問題](https://github.com/ChatGPT3a01/maternal-ai-platform/issues)
-- 💬 Discussions: [參與討論](https://github.com/ChatGPT3a01/maternal-ai-platform/discussions)
+- ❌ 禁止修改本專案內容
+- ❌ 禁止轉傳或散布
+- ❌ 禁止商業使用
+- ❌ 禁止未經授權之任何形式使用
+
+如有任何授權需求，請聯繫作者。
+
+</div>
 
 ---
 
 <div align="center">
 
-### ⭐ 如果這個專案對您有幫助，請給我們一個星星！
+## ⭐ 喜歡這個專案嗎？
+
+如果這個專案對您有幫助，請給我們一個星星！
 
 **最後更新**：2026-01-15 | **版本**：1.0.0 | **框架**：Next.js 14 + TypeScript
 
-Made with ❤️ for expecting mothers
+[⬆ 回到頂部](#-產婦-ai-問答平台)
+
+---
+
+**© 2026 阿亮老師 | 使用 Claude Code 開發**
 
 </div>
