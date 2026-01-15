@@ -215,13 +215,13 @@ export default function Home() {
               從待產注意事項開始，一步步了解完整的待產知識
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/labor-care">
+              <Link href="/labor-care/">
                 <Button size="lg" className="w-full sm:w-auto">
                   開始學習
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link href="/chat">
+              <Link href="/chat/">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto">
                   直接詢問 AI
                 </Button>
@@ -235,7 +235,7 @@ export default function Home() {
       <Dialog open={showPretestDialog} onOpenChange={setShowPretestDialog}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle>歡迎使用產婦 AI 問答平台</DialogTitle>
+            <DialogTitle>歡迎使用產婦知識平台</DialogTitle>
             <DialogDescription className="pt-4">
               在開始使用之前，想邀請您填寫一份問卷，幫助我們了解您目前對待產知識的了解程度。
               <br />

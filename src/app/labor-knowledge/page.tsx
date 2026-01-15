@@ -5,7 +5,7 @@ import { ArrowRight, Clock, BookOpen } from 'lucide-react';
 import laborKnowledgeData from '@/data/knowledge/labor-knowledge.json';
 
 export const metadata = {
-  title: '待產知識 - 產婦 AI 問答平台',
+  title: '待產知識 - 產婦知識平台',
   description: '完整的待產知識指南，包含認識產兆、產程進展判斷與處理、非藥物減痛方法等重要資訊。',
 };
 
@@ -31,7 +31,7 @@ export default function LaborKnowledgePage() {
             return (
               <Link
                 key={section.id}
-                href={`/labor-knowledge/${section.id}`}
+                href={`/labor-knowledge/${section.id}/`}
                 className="block group"
               >
                 <Card className="h-full transition-all hover:shadow-lg hover:border-pink-200 dark:hover:border-pink-800">

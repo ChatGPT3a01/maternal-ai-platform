@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   return {
-    title: `${section.title} - 待產知識 - 產婦 AI 問答平台`,
+    title: `${section.title} - 待產知識 - 產婦知識平台`,
     description: section.content.substring(0, 150),
   };
 }

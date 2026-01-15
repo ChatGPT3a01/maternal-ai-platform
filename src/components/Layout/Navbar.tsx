@@ -17,10 +17,10 @@ import { useState } from 'react';
 
 const navItems = [
   { href: '/', label: '首頁', icon: Baby },
-  { href: '/labor-care', label: '待產注意事項', icon: ClipboardList },
-  { href: '/labor-knowledge', label: '待產知識', icon: BookOpen },
-  { href: '/quiz', label: '測驗', icon: FileText },
-  { href: '/chat', label: 'AI 問答', icon: MessageCircle },
+  { href: '/labor-care/', label: '待產注意事項', icon: ClipboardList },
+  { href: '/labor-knowledge/', label: '待產知識', icon: BookOpen },
+  { href: '/quiz/', label: '測驗', icon: FileText },
+  { href: '/chat/', label: 'AI 問答', icon: MessageCircle },
 ];
 
 export function Navbar() {
@@ -33,8 +33,8 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Baby className="h-8 w-8 text-pink-500" />
-          <span className="font-bold text-xl hidden sm:inline">產婦 AI 問答平台</span>
-          <span className="font-bold text-xl sm:hidden">MamaAI</span>
+          <span className="font-bold text-xl hidden sm:inline">產婦知識平台</span>
+          <span className="font-bold text-xl sm:hidden">產婦知識</span>
         </Link>
 
         {/* Desktop Navigation */}
