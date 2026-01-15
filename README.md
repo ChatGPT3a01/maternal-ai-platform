@@ -21,6 +21,20 @@
   <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square" alt="Version">
 </p>
 
+<br>
+
+<h2>🌐 立即體驗線上 Demo</h2>
+
+<p align="center">
+  <a href="https://chatgpt3a01.github.io/maternal-ai-platform/">
+    <img src="https://img.shields.io/badge/🚀_立即前往線上平台-點擊體驗-FF69B4?style=for-the-badge&labelColor=C71585" alt="線上 Demo" height="60">
+  </a>
+</p>
+
+<p align="center">
+  <strong>👆 點擊上方按鈕，體驗完整的產婦 AI 問答平台功能</strong>
+</p>
+
 </div>
 
 ---
