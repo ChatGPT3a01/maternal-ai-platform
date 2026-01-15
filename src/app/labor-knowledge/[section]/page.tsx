@@ -5,9 +5,9 @@ import laborKnowledgeData from '@/data/knowledge/labor-knowledge.json';
 import type { KnowledgeArticle as KnowledgeArticleType } from '@/types';
 
 interface PageProps {
-  params: {
+  params: Promise<{
     section: string;
-  };
+  }>;
 }
 
 // 生成靜態參數
@@ -19,8 +19,9 @@ export async function generateStaticParams() {
 
 // 生成動態 metadata
 export async function generateMetadata({ params }: PageProps) {
+  const resolvedParams = await params;
   const section = laborKnowledgeData.sections.find(
-    (s) => s.id === params.section
+    (s) => s.id === resolvedParams.section
   );
 
   if (!section) {
@@ -35,10 +36,11 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default function LaborKnowledgeSectionPage({ params }: PageProps) {
+export default async function LaborKnowledgeSectionPage({ params }: PageProps) {
   // 找到對應的章節
+  const resolvedParams = await params;
   const section = laborKnowledgeData.sections.find(
-    (s) => s.id === params.section
+    (s) => s.id === resolvedParams.section
   );
 
   if (!section) {
