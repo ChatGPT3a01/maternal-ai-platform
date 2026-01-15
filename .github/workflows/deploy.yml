@@ -1,0 +1,66 @@
+name: Deploy to GitHub Pages
+
+on:
+  # 當推送到 master 分支時觸發
+  push:
+    branches: [master]
+
+  # 允許手動觸發
+  workflow_dispatch:
+
+# 設定權限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允許一次部署同時進行
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  # 建置任務
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with Next.js
+        run: npm run build
+        env:
+          # 環境變數（部署時需要的公開資訊）
+          NEXT_PUBLIC_GOOGLE_WEBAPP_URL: ${{ secrets.NEXT_PUBLIC_GOOGLE_WEBAPP_URL }}
+          NEXT_PUBLIC_TRACKING_SHEET_ID: ${{ secrets.NEXT_PUBLIC_TRACKING_SHEET_ID }}
+          NEXT_PUBLIC_PRETEST_URL: ${{ secrets.NEXT_PUBLIC_PRETEST_URL }}
+          NEXT_PUBLIC_POSTTEST_URL: ${{ secrets.NEXT_PUBLIC_POSTTEST_URL }}
+
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  # 部署任務
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
