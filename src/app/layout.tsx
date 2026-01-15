@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "產婦 AI 問答平台",
+  title: "產婦知識平台",
   description: "提供孕期、待產、產後照護及新生兒照顧的專業衛教諮詢",
 };
 
