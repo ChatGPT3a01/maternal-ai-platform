@@ -561,6 +561,6 @@ location.reload();
 
 ---
 
-**© 2026 阿亮老師 | 使用 Claude Code 開發**
+**© 2026 阿亮老師**
 
 </div>
