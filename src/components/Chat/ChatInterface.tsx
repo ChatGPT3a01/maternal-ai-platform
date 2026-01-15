@@ -21,10 +21,19 @@ import {
 import { ApiKeyModal } from './ApiKeyModal';
 import { useApiKey } from '@/hooks/useApiKey';
 import { useChat } from '@/hooks/useChat';
+import { useTracking } from '@/hooks/useTracking';
 import { cn } from '@/lib/utils';
 import type { Message } from '@/types';
 
-export function ChatInterface() {
+interface ChatInterfaceProps {
+  initialQuestion?: string;
+  questionContext?: {
+    context?: string;
+    sectionId?: string;
+  };
+}
+
+export function ChatInterface({ initialQuestion, questionContext }: ChatInterfaceProps) {
   const { config, isConfigured, saveConfig, isLoading: configLoading } = useApiKey();
   const {
     sessions,
@@ -38,9 +47,11 @@ export function ChatInterface() {
     sendMessage,
     clearError,
   } = useChat(config);
+  const { recordQuestion } = useTracking();
 
   const [input, setInput] = useState('');
   const [showApiModal, setShowApiModal] = useState(false);
+  const [hasAutoSent, setHasAutoSent] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -58,12 +69,34 @@ export function ChatInterface() {
     }
   }, [configLoading, isConfigured]);
 
+  // Auto-send initial question
+  useEffect(() => {
+    if (
+      initialQuestion &&
+      !hasAutoSent &&
+      isConfigured &&
+      !isLoading &&
+      currentSession
+    ) {
+      setHasAutoSent(true);
+      sendMessage(initialQuestion);
+
+      // 記錄提問到追蹤系統
+      const context = questionContext?.context || questionContext?.sectionId || undefined;
+      recordQuestion(initialQuestion, context);
+    }
+  }, [initialQuestion, hasAutoSent, isConfigured, isLoading, currentSession, questionContext, recordQuestion]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
     const message = input;
     setInput('');
+
+    // 記錄提問到追蹤系統
+    recordQuestion(message);
+
     await sendMessage(message);
   };
 

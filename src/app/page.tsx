@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -12,271 +13,244 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import {
-  Baby,
-  MessageCircle,
-  Calendar,
-  Stethoscope,
-  ClipboardList,
-  Heart,
-  Shield,
-  Clock,
-  ArrowRight,
+  ClipboardCheck,
+  BookOpen,
   FileText,
+  MessageCircle,
+  Baby,
+  ArrowRight,
 } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { ProgressIndicator } from '@/components/Knowledge/ProgressIndicator';
 
-const PRETEST_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfemAG6blD0W_Utb_DjRFUTiWz9L-1kxioGbAD2Fll4cVtDwg/viewform';
-const POSTTEST_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfku_2HiZ0oFBvipzmIzhjlgCKeoDaTaqi-QFTHyKqktS74Hg/viewform';
+const PRETEST_URL = 'https://docs.google.com/forms/d/1pWj9TwGCWUt0cZGmtGdVg2iITi7bbpKc6dXhwyi3qRw/viewform';
 
-const features = [
+// 四大主選單
+const mainFeatures = [
   {
+    title: '待產注意事項',
+    icon: ClipboardCheck,
+    href: '/labor-care',
+    description: '了解待產時的重要事項與準備',
+    color: 'pink',
+  },
+  {
+    title: '待產知識',
+    icon: BookOpen,
+    href: '/labor-knowledge',
+    description: '認識產兆、產程進展、減痛方法',
+    color: 'purple',
+  },
+  {
+    title: '測驗',
+    icon: FileText,
+    href: '/quiz',
+    description: '前測與後測問卷',
+    color: 'blue',
+  },
+  {
+    title: 'AI 問答',
     icon: MessageCircle,
-    title: 'AI 智慧問答',
-    description: '24小時即時回答您的孕產期問題，提供專業衛教資訊',
     href: '/chat',
-    color: 'text-pink-500',
-  },
-  {
-    icon: Calendar,
-    title: '孕期追蹤',
-    description: '追蹤懷孕週數，了解寶寶發育和產檢時程',
-    href: '/tracker',
-    color: 'text-purple-500',
-  },
-  {
-    icon: Stethoscope,
-    title: '症狀自我檢查',
-    description: 'AI 協助評估症狀，提供就醫建議',
-    href: '/symptoms',
-    color: 'text-blue-500',
-  },
-  {
-    icon: ClipboardList,
-    title: '寶寶成長紀錄',
-    description: '記錄寶寶身高體重、餵奶時間、疫苗接種',
-    href: '/baby',
-    color: 'text-green-500',
+    description: '24小時智慧諮詢服務',
+    color: 'green',
   },
 ];
 
-const highlights = [
-  {
-    icon: Shield,
-    title: '隱私安全',
-    description: 'API Key 只存在您的瀏覽器中，不會上傳到任何伺服器',
+const colorClasses = {
+  pink: {
+    bg: 'bg-pink-50 dark:bg-pink-950/20',
+    border: 'border-pink-200 dark:border-pink-800',
+    icon: 'text-pink-600 dark:text-pink-400',
+    hover: 'hover:border-pink-300 dark:hover:border-pink-700',
   },
-  {
-    icon: Heart,
-    title: '專業知識庫',
-    description: '整合衛福部官方衛教手冊，提供可靠的資訊',
+  purple: {
+    bg: 'bg-purple-50 dark:bg-purple-950/20',
+    border: 'border-purple-200 dark:border-purple-800',
+    icon: 'text-purple-600 dark:text-purple-400',
+    hover: 'hover:border-purple-300 dark:hover:border-purple-700',
   },
-  {
-    icon: Clock,
-    title: '24/7 全天候',
-    description: '隨時隨地都可以諮詢，不受時間限制',
+  blue: {
+    bg: 'bg-blue-50 dark:bg-blue-950/20',
+    border: 'border-blue-200 dark:border-blue-800',
+    icon: 'text-blue-600 dark:text-blue-400',
+    hover: 'hover:border-blue-300 dark:hover:border-blue-700',
   },
-];
+  green: {
+    bg: 'bg-green-50 dark:bg-green-950/20',
+    border: 'border-green-200 dark:border-green-800',
+    icon: 'text-green-600 dark:text-green-400',
+    hover: 'hover:border-green-300 dark:hover:border-green-700',
+  },
+};
 
-export default function HomePage() {
+export default function Home() {
   const [showPretestDialog, setShowPretestDialog] = useState(false);
-  const [hasCompletedPretest, setHasCompletedPretest] = useState(false);
 
   useEffect(() => {
-    const completed = localStorage.getItem('maternal-pretest-completed');
-    setHasCompletedPretest(completed === 'true');
-
-    if (!completed) {
-      const timer = setTimeout(() => {
-        setShowPretestDialog(true);
-      }, 1000);
-      return () => clearTimeout(timer);
+    // 檢查是否首次訪問（是否顯示過廣告視窗）
+    const hasSeenDialog = localStorage.getItem('maternal-show-pretest-dialog');
+    if (!hasSeenDialog) {
+      setShowPretestDialog(true);
     }
   }, []);
 
-  const handlePretestComplete = () => {
-    localStorage.setItem('maternal-pretest-completed', 'true');
-    setHasCompletedPretest(true);
+  const handleClosePretestDialog = () => {
+    // 記錄已顯示過，下次不再自動彈出
+    localStorage.setItem('maternal-show-pretest-dialog', 'seen');
+    setShowPretestDialog(false);
+  };
+
+  const handleGoToPretest = () => {
+    localStorage.setItem('maternal-show-pretest-dialog', 'seen');
+    window.open(PRETEST_URL, '_blank');
     setShowPretestDialog(false);
   };
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-br from-pink-50 to-purple-50 dark:from-pink-950/20 dark:to-purple-950/20">
-        <div className="container mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <Baby className="h-20 w-20 text-pink-500" />
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            產婦 AI 問答平台
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            您的孕產期智慧助理，提供專業的衛教諮詢服務，
-            陪伴您從懷孕到產後的每一步。
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/chat">
-              <Button size="lg" className="gap-2 bg-pink-500 hover:bg-pink-600">
-                <MessageCircle className="h-5 w-5" />
-                開始諮詢
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-            {!hasCompletedPretest && (
-              <Button
-                size="lg"
-                variant="outline"
-                className="gap-2"
-                onClick={() => setShowPretestDialog(true)}
-              >
-                <FileText className="h-5 w-5" />
-                填寫前測問卷
-              </Button>
-            )}
+      <section className="relative bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-pink-950/20 dark:via-purple-950/20 dark:to-blue-950/20 py-20">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-pink-100 dark:bg-pink-900/30 mb-6">
+              <Baby className="h-10 w-10 text-pink-600 dark:text-pink-400" />
+            </div>
+            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+              Baby Landing
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8">
+              專業的待產知識學習平台，結合 AI 智慧問答，陪伴您安心迎接寶寶的到來
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">主要功能</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature) => {
-              const Icon = feature.icon;
-              return (
-                <Link key={feature.href} href={feature.href}>
-                  <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
-                    <CardHeader>
-                      <Icon className={`h-10 w-10 ${feature.color} mb-2`} />
-                      <CardTitle>{feature.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription>{feature.description}</CardDescription>
-                    </CardContent>
-                  </Card>
-                </Link>
-              );
-            })}
+      {/* 學習進度 */}
+      <section className="py-8 border-b">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <ProgressIndicator variant="detailed" />
           </div>
         </div>
       </section>
 
-      {/* Highlights Section */}
-      <section className="py-16 px-4 bg-muted/50">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">平台特色</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {highlights.map((highlight) => {
-              const Icon = highlight.icon;
-              return (
-                <div key={highlight.title} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="p-3 rounded-full bg-pink-100 dark:bg-pink-900/30">
-                      <Icon className="h-8 w-8 text-pink-500" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{highlight.title}</h3>
-                  <p className="text-muted-foreground">{highlight.description}</p>
+      {/* 四大主選單 */}
+      <section className="py-16">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">探索待產知識</h2>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {mainFeatures.map((feature) => {
+                const colors = colorClasses[feature.color as keyof typeof colorClasses];
+                const Icon = feature.icon;
+
+                return (
+                  <Link key={feature.title} href={feature.href} className="block group">
+                    <Card className={`h-full transition-all ${colors.border} ${colors.hover} hover:shadow-lg`}>
+                      <CardHeader>
+                        <div className={`inline-flex p-3 rounded-lg ${colors.bg} mb-4`}>
+                          <Icon className={`h-8 w-8 ${colors.icon}`} />
+                        </div>
+                        <CardTitle className="text-xl group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors flex items-center justify-between">
+                          {feature.title}
+                          <ArrowRight className="h-5 w-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </CardTitle>
+                        <CardDescription className="mt-2">
+                          {feature.description}
+                        </CardDescription>
+                      </CardHeader>
+                    </Card>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 平台特色 */}
+      <section className="py-16 bg-muted/30">
+        <div className="container">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">為什麼選擇我們</h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="text-center">
+                <div className="inline-flex p-4 rounded-full bg-pink-100 dark:bg-pink-900/30 mb-4">
+                  <BookOpen className="h-8 w-8 text-pink-600 dark:text-pink-400" />
                 </div>
-              );
-            })}
+                <h3 className="text-xl font-semibold mb-2">完整知識庫</h3>
+                <p className="text-muted-foreground">
+                  涵蓋待產注意事項、產兆辨識、產程進展、減痛方法等完整資訊
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="inline-flex p-4 rounded-full bg-purple-100 dark:bg-purple-900/30 mb-4">
+                  <MessageCircle className="h-8 w-8 text-purple-600 dark:text-purple-400" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">AI 智慧問答</h3>
+                <p className="text-muted-foreground">
+                  每個知識點都能直接詢問 AI，獲得個人化的詳細解答
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="inline-flex p-4 rounded-full bg-blue-100 dark:bg-blue-900/30 mb-4">
+                  <FileText className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">學習追蹤</h3>
+                <p className="text-muted-foreground">
+                  記錄您的學習進度，透過前後測問卷評估學習成效
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Knowledge Base Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">知識庫涵蓋範圍</h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            整合衛生福利部國民健康署官方衛教手冊內容，提供完整的孕產期照護資訊
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { title: '孕婦衛教', items: ['產前檢查', '孕期營養', '高危險妊娠', '孕婦運動'] },
-              { title: '待產知識', items: ['產兆辨識', '產程進展', '減痛方法', '呼吸技巧'] },
-              { title: '產後照護', items: ['傷口照顧', '惡露觀察', '產後運動', '避孕方法'] },
-              { title: '新生兒照護', items: ['母乳哺餵', '黃疸觀察', '臍帶護理', '疫苗接種'] },
-            ].map((category) => (
-              <Card key={category.title}>
-                <CardHeader>
-                  <CardTitle className="text-lg">{category.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-1">
-                    {category.items.map((item) => (
-                      <li key={item} className="text-sm text-muted-foreground flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-pink-500" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">準備好開始學習了嗎？</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              從待產注意事項開始，一步步了解完整的待產知識
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/labor-care">
+                <Button size="lg" className="w-full sm:w-auto">
+                  開始學習
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/chat">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                  直接詢問 AI
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Survey Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-green-50 dark:from-blue-950/20 dark:to-green-950/20">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">使用體驗問卷</h2>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            您的意見對我們很重要！請在使用平台前後填寫問卷，幫助我們改善服務。
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <a href={PRETEST_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="gap-2">
-                <FileText className="h-5 w-5" />
-                前測問卷（使用前填寫）
-              </Button>
-            </a>
-            <a href={POSTTEST_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="gap-2">
-                <FileText className="h-5 w-5" />
-                後測問卷（使用後填寫）
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Disclaimer */}
-      <section className="py-8 px-4 bg-muted">
-        <div className="container mx-auto text-center">
-          <p className="text-sm text-muted-foreground">
-            <strong>免責聲明：</strong>本平台提供的資訊僅供衛教參考，不能取代專業醫療診斷。
-            如有任何健康疑慮或緊急情況，請立即就醫諮詢。
-          </p>
-        </div>
-      </section>
-
-      {/* Pretest Dialog */}
+      {/* 前測問卷廣告視窗 */}
       <Dialog open={showPretestDialog} onOpenChange={setShowPretestDialog}>
-        <DialogContent>
+        <DialogContent className="sm:max-w-md">
           <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <FileText className="h-5 w-5 text-pink-500" />
-              歡迎使用產婦 AI 問答平台
-            </DialogTitle>
-            <DialogDescription>
-              在開始使用之前，我們想邀請您填寫一份簡短的前測問卷，
-              幫助我們了解您目前對孕產知識的了解程度。
-              問卷填寫完全匿名，約需 2-3 分鐘。
+            <DialogTitle>歡迎使用產婦 AI 問答平台</DialogTitle>
+            <DialogDescription className="pt-4">
+              在開始使用之前，想邀請您填寫一份問卷，幫助我們了解您目前對待產知識的了解程度。
+              <br />
+              <br />
+              問卷不會記錄您的姓名與個人識別資料，作答內容僅供本研究統計分析使用，非常感謝您的協助與參與。
             </DialogDescription>
           </DialogHeader>
-          <DialogFooter className="flex-col sm:flex-row gap-2">
-            <Button variant="outline" onClick={() => setShowPretestDialog(false)}>
+          <DialogFooter className="sm:justify-between gap-2">
+            <Button variant="ghost" onClick={handleClosePretestDialog} className="flex-1">
               稍後填寫
             </Button>
-            <a href={PRETEST_URL} target="_blank" rel="noopener noreferrer">
-              <Button className="w-full sm:w-auto gap-2" onClick={handlePretestComplete}>
-                前往填寫問卷
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </a>
+            <Button onClick={handleGoToPretest} className="flex-1">
+              前往填寫問卷
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

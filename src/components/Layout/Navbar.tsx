@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button';
 import {
   Baby,
   MessageCircle,
-  Calendar,
-  Stethoscope,
   ClipboardList,
+  BookOpen,
+  FileText,
   Menu,
   X,
 } from 'lucide-react';
@@ -17,10 +17,10 @@ import { useState } from 'react';
 
 const navItems = [
   { href: '/', label: '首頁', icon: Baby },
+  { href: '/labor-care', label: '待產注意事項', icon: ClipboardList },
+  { href: '/labor-knowledge', label: '待產知識', icon: BookOpen },
+  { href: '/quiz', label: '測驗', icon: FileText },
   { href: '/chat', label: 'AI 問答', icon: MessageCircle },
-  { href: '/tracker', label: '孕期追蹤', icon: Calendar },
-  { href: '/symptoms', label: '症狀檢查', icon: Stethoscope },
-  { href: '/baby', label: '寶寶紀錄', icon: ClipboardList },
 ];
 
 export function Navbar() {

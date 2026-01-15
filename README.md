@@ -1,156 +1,224 @@
-# 產婦 AI 問答平台
+# 產婦 AI 問答平台 (Baby Landing)
 
-一個基於 Next.js 的智慧孕產諮詢平台，整合 AI 技術提供專業的孕產期衛教諮詢服務。
+一個整合待產知識學習與 AI 智慧問答的產婦衛教平台，提供完整的使用者學習追蹤功能。
 
-## 功能特色
+## 專案特色
 
-### AI 智慧問答
-- 支援 Google Gemini 與 OpenAI 兩種 AI 服務
-- 內建完整的孕產期知識庫
-- 即時串流回應，提供流暢的對話體驗
-- 對話歷史自動保存
-
-### 孕期追蹤
-- 輸入預產期或末次月經日期
-- 自動計算懷孕週數
-- 顯示對應週數的發育里程碑
-- 產檢項目追蹤
-
-### 症狀自我檢查
-- 分類症狀選擇（孕期/待產/產後/寶寶）
-- AI 分析症狀嚴重程度
-- 緊急就醫提醒
-- 專業建議指引
-
-### 寶寶成長紀錄
-- 記錄身高、體重、頭圍
-- 視覺化成長曲線圖表
-- 餵奶與換尿布紀錄
-- 疫苗接種時程提醒
+- 📚 **完整知識庫**：涵蓋待產注意事項、產兆辨識、產程進展、減痛方法等資訊
+- 🤖 **AI 智慧問答**：每個知識點都能直接詢問 AI，獲得個人化解答
+- 📊 **學習追蹤**：自動記錄閱讀進度、提問記錄、停留時間等資料
+- 📝 **前後測問卷**：評估學習成效
+- 🎨 **響應式設計**：支援桌面、平板、手機多種裝置
 
 ## 技術架構
 
-- **框架**: Next.js 14 (App Router)
-- **UI**: Tailwind CSS + shadcn/ui
-- **圖表**: Recharts
-- **AI**: Google Gemini API / OpenAI API
-- **儲存**: 瀏覽器 localStorage（無後端）
+- **前端框架**：Next.js 14 (App Router)
+- **UI 組件**：shadcn/ui + Tailwind CSS
+- **AI 整合**：支援 Gemini 和 OpenAI
+- **資料追蹤**：Google Sheets + Apps Script
+- **狀態管理**：React Hooks + localStorage
 
 ## 快速開始
 
-### 安裝依賴
+### 1. 安裝相依套件
 
 ```bash
 npm install
 ```
 
-### 開發模式
+### 2. 設定環境變數
+
+```bash
+# 複製環境變數模板
+cp .env.local.example .env.local
+
+# 編輯 .env.local，填入您的設定值
+```
+
+### 3. 設定 Google Sheets 追蹤系統
+
+詳細步驟請參考 [完整設置指南](docs/SETUP_GUIDE.md)
+
+### 4. 啟動開發伺服器
 
 ```bash
 npm run dev
 ```
 
-開啟 [http://localhost:3000](http://localhost:3000) 查看結果。
-
-### 建置部署
-
-```bash
-npm run build
-npm start
-```
-
-## 使用說明
-
-### 1. 設定 API Key
-
-首次使用時，點擊「設定 API Key」按鈕，選擇您的 AI 服務提供商：
-
-**Google Gemini（推薦）**
-- 前往 [Google AI Studio](https://aistudio.google.com/app/apikey) 取得 API Key
-- 支援模型：gemini-2.5-flash、gemini-2.5-pro
-
-**OpenAI**
-- 前往 [OpenAI Platform](https://platform.openai.com/api-keys) 取得 API Key
-- 支援模型：gpt-4o、gpt-5.2
-
-### 2. 開始使用
-
-設定完成後，即可使用以下功能：
-- **AI 問答**: 詢問任何孕產期相關問題
-- **孕期追蹤**: 追蹤您的懷孕進度
-- **症狀檢查**: 快速評估症狀
-- **寶寶紀錄**: 記錄寶寶成長
-
-## API Key 安全說明
-
-- API Key 僅儲存於您的瀏覽器 localStorage
-- 不會傳送至任何第三方伺服器
-- 您可以隨時清除瀏覽器資料以刪除 API Key
-- 建議在 API 平台設定用量限制以控制費用
-
-## 部署至 Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/maternal-ai-platform)
-
-1. Fork 此專案到您的 GitHub
-2. 登入 [Vercel](https://vercel.com)
-3. 點擊 "New Project"
-4. 選擇您 Fork 的 Repository
-5. 點擊 "Deploy"
+開啟瀏覽器訪問 http://localhost:3000
 
 ## 專案結構
 
 ```
 maternal-ai-platform/
-├── public/
-│   └── images/              # 衛教圖片資源
 ├── src/
-│   ├── app/                 # Next.js App Router 頁面
-│   │   ├── page.tsx         # 首頁
-│   │   ├── chat/            # AI 問答頁面
-│   │   ├── tracker/         # 孕期追蹤頁面
-│   │   ├── symptoms/        # 症狀檢查頁面
-│   │   └── baby/            # 寶寶紀錄頁面
-│   ├── components/          # React 組件
-│   │   ├── ui/              # shadcn/ui 基礎組件
-│   │   ├── Chat/            # 聊天相關組件
-│   │   └── Layout/          # 版面組件
-│   ├── hooks/               # React Hooks
-│   ├── lib/                 # 工具函式與 AI 整合
-│   │   ├── ai/              # AI API 整合
-│   │   ├── knowledge/       # 知識庫內容
-│   │   └── utils/           # 工具函式
-│   └── types/               # TypeScript 型別定義
-├── package.json
-└── README.md
+│   ├── app/                    # Next.js App Router 頁面
+│   │   ├── page.tsx           # 首頁 (Baby Landing)
+│   │   ├── labor-care/        # 待產注意事項
+│   │   ├── labor-knowledge/   # 待產知識
+│   │   ├── quiz/              # 測驗問卷
+│   │   └── chat/              # AI 問答
+│   ├── components/            # React 組件
+│   │   ├── Knowledge/         # 知識展示組件
+│   │   ├── Chat/              # 聊天介面組件
+│   │   ├── Tracking/          # 追蹤組件
+│   │   └── Layout/            # 佈局組件
+│   ├── lib/                   # 工具函數
+│   │   └── tracking/          # 追蹤系統
+│   ├── hooks/                 # React Hooks
+│   ├── data/                  # 知識庫 JSON
+│   └── types/                 # TypeScript 型別定義
+├── docs/                      # 文件
+│   ├── SETUP_GUIDE.md        # 完整設置指南
+│   └── google-apps-script.js # Google Apps Script 程式碼
+└── public/                    # 靜態資源
 ```
 
-## 知識庫來源
+## 主要功能
 
-本平台整合以下衛教資源：
-- 孕婦衛教手冊
-- 待產知識指南
-- 產後媽媽照護篇
-- 新生兒照護篇
+### 1. 知識學習
 
-## 研究問卷
+- **待產注意事項**：完整的待產準備指南
+- **待產知識**：
+  - 認識產兆
+  - 產程進展
+  - 減痛方法
 
-本平台整合前測與後測問卷，用於收集使用者回饋：
-- [前測問卷](https://docs.google.com/forms/d/e/1FAIpQLSfemAG6blD0W_Utb_DjRFUTiWz9L-1kxioGbAD2Fll4cVtDwg/viewform) - 使用平台前填寫
-- [後測問卷](https://docs.google.com/forms/d/e/1FAIpQLSfku_2HiZ0oFBvipzmIzhjlgCKeoDaTaqi-QFTHyKqktS74Hg/viewform) - 使用平台後填寫
+### 2. AI 問答
+
+- 支援自然語言提問
+- 整合 Gemini 和 OpenAI 模型
+- 知識點旁的「詢問 AI 更多」按鈕提供預設問題
+
+### 3. 學習追蹤
+
+自動追蹤以下資料並上傳至 Google Sheets：
+
+- **頁面瀏覽**：記錄訪問的頁面和停留時間
+- **閱讀記錄**：記錄滾動深度和閱讀時間
+- **提問記錄**：記錄所有 AI 提問內容和來源
+- **學習進度**：計算完成章節數和進度百分比
+
+### 4. 測驗評估
+
+- **前測問卷**：學習前的知識水平評估
+- **後測問卷**：學習後的成效評估
+
+## 追蹤系統架構
+
+```
+使用者行為
+    ↓
+React Hooks (usePageView, useReadingProgress, useTracking)
+    ↓
+Analytics Service (TrackingQueue)
+    ↓
+localStorage 暫存 (批次佇列)
+    ↓
+Google Apps Script Web App (API)
+    ↓
+Google Sheets (資料儲存)
+```
+
+### 追蹤機制特色
+
+- ✅ 批次上傳（累積 10 筆或 30 秒）
+- ✅ 失敗重試（最多 3 次）
+- ✅ 離線暫存（localStorage）
+- ✅ 匿名追蹤（UUID）
+- ✅ 跨 tab 同步
+
+## 部署
+
+### Vercel 部署（推薦）
+
+```bash
+# 使用 Vercel CLI
+vercel
+
+# 或訪問 https://vercel.com/ 透過 UI 部署
+```
+
+記得在 Vercel 設定環境變數：
+- `NEXT_PUBLIC_GOOGLE_WEBAPP_URL`
+- `NEXT_PUBLIC_TRACKING_SHEET_ID`
+- `NEXT_PUBLIC_PRETEST_URL`
+- `NEXT_PUBLIC_POSTTEST_URL`
+
+詳細部署步驟請參考 [完整設置指南](docs/SETUP_GUIDE.md#部署到-vercel)
+
+## 文件
+
+- 📖 [完整設置指南](docs/SETUP_GUIDE.md) - 詳細的環境設置和部署教學
+- 📜 [Google Apps Script](docs/google-apps-script.js) - 追蹤系統後端程式碼
+
+## 測試
+
+### 本地測試
+
+```bash
+npm run dev
+```
+
+### 追蹤功能測試
+
+1. 開啟瀏覽器開發者工具 (F12)
+2. 瀏覽各個頁面
+3. 觀察 Console 輸出
+4. 檢查 localStorage 資料
+5. 確認 Google Sheets 有新增資料
+
+詳細測試清單請參考 [完整設置指南](docs/SETUP_GUIDE.md#測試追蹤功能)
+
+## 環境變數
+
+| 變數名稱 | 說明 | 必填 |
+|---------|------|------|
+| `NEXT_PUBLIC_GOOGLE_WEBAPP_URL` | Google Apps Script Web App URL | ✅ |
+| `NEXT_PUBLIC_TRACKING_SHEET_ID` | Google Sheets ID | ⭕ |
+| `NEXT_PUBLIC_PRETEST_URL` | 前測問卷連結 | ✅ |
+| `NEXT_PUBLIC_POSTTEST_URL` | 後測問卷連結 | ✅ |
+
+## 技術細節
+
+### 閱讀完成判定
+
+章節標記為「已完成」需同時滿足：
+- 停留時間 ≥ 預估閱讀時間 × 50%
+- 滾動深度 ≥ 80%
+
+### 批次上傳機制
+
+- 自動觸發條件：
+  - 累積 10 筆追蹤資料
+  - 或距離上次上傳超過 30 秒
+- 失敗重試：最多 3 次
+- 離線支援：暫存於 localStorage
+
+### 匿名追蹤
+
+- 自動生成 UUID：`user_${timestamp}_${random}`
+- 儲存於 localStorage：`maternal-user-id`
+- 不記錄任何個人識別資訊
+
+## 常見問題
+
+請參考 [完整設置指南 - 常見問題](docs/SETUP_GUIDE.md#常見問題)
 
 ## 免責聲明
 
 本平台提供的資訊僅供參考，不能取代專業醫療診斷與治療。如有任何健康疑慮，請諮詢您的醫師或其他醫療專業人員。
 
-## 授權條款
+## 授權
 
-MIT License
+此專案僅供研究和教育用途使用。
 
-## 貢獻指南
+## 聯絡資訊
 
-歡迎提交 Pull Request 或開立 Issue 來協助改善此專案。
+如有任何問題或建議，歡迎透過 GitHub Issues 聯繫。
 
 ---
 
-如有任何問題或建議，請透過 GitHub Issues 與我們聯繫。
+**更新日期**：2025-01-15
+**版本**：1.0.0
+**開發框架**：Next.js 14 + TypeScript
