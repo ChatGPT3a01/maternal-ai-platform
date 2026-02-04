@@ -10,11 +10,125 @@ d:I[68027,[],"default"]
 :HL["/maternal-ai-platform/_next/static/chunks/366c3bc3c9164715.css","style"]
 :HL["/maternal-ai-platform/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/maternal-ai-platform/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"P":null,"b":"dWe8FzIRY4Owl_p27Fq_z","c":["","labor-knowledge","pain-relief",""],"q":"","i":false,"f":[[["",{"children":["labor-knowledge",{"children":[["section","pain-relief","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/maternal-ai-platform/_next/static/chunks/366c3bc3c9164715.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/maternal-ai-platform/_next/static/chunks/c2cce405223ad689.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/maternal-ai-platform/_next/static/chunks/76de27d4139bb6b8.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"zh-TW","children":["$","body",null,{"className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased","children":[["$","$L2",null,{}],["$","main",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"/maternal-ai-platform/_next/static/chunks/270adab31723ecc3.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/maternal-ai-platform/_next/static/chunks/1da067024ce9f290.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/maternal-ai-platform/_next/static/chunks/7ec504c60824965a.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/maternal-ai-platform/_next/static/chunks/c7d63a8723400ab9.js","async":true,"nonce":"$undefined"}],["$","script","script-4",{"src":"/maternal-ai-platform/_next/static/chunks/9f3ff4861e1ddef6.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$@a"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$@c"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$d",[]],"S":true}
-e:I[72192,["/maternal-ai-platform/_next/static/chunks/c2cce405223ad689.js","/maternal-ai-platform/_next/static/chunks/76de27d4139bb6b8.js","/maternal-ai-platform/_next/static/chunks/270adab31723ecc3.js","/maternal-ai-platform/_next/static/chunks/1da067024ce9f290.js","/maternal-ai-platform/_next/static/chunks/7ec504c60824965a.js","/maternal-ai-platform/_next/static/chunks/c7d63a8723400ab9.js","/maternal-ai-platform/_next/static/chunks/9f3ff4861e1ddef6.js"],"PageTracker"]
-f:I[16770,["/maternal-ai-platform/_next/static/chunks/c2cce405223ad689.js","/maternal-ai-platform/_next/static/chunks/76de27d4139bb6b8.js","/maternal-ai-platform/_next/static/chunks/270adab31723ecc3.js","/maternal-ai-platform/_next/static/chunks/1da067024ce9f290.js","/maternal-ai-platform/_next/static/chunks/7ec504c60824965a.js","/maternal-ai-platform/_next/static/chunks/c7d63a8723400ab9.js","/maternal-ai-platform/_next/static/chunks/9f3ff4861e1ddef6.js"],"KnowledgeArticle"]
-5:["$","$Le",null,{"pageName":"待產知識 - 非藥物減痛方法","children":["$","div",null,{"className":"container py-8","children":["$","$Lf",null,{"article":{"id":"pain-relief","title":"非藥物減痛方法","slug":"pain-relief","category":"labor-knowledge","metadata":{"readTime":25,"lastUpdated":"2024-12-18","source":"衛生福利部國民健康署"},"sections":[{"id":"pain-relief","title":"非藥物減痛方法","order":3,"content":"待產過程中有多種非藥物方法可以幫助緩解疼痛，包括呼吸技巧、音樂治療、按摩、冷熱敷、姿位改變等。這些方法可以單獨使用或組合使用，找到最適合您的方式。","suggestedQuestions":["有哪些非藥物減痛方法？","哪種減痛方法最有效？","可以同時使用多種減痛方法嗎？"],"subsections":[{"id":"breathing","title":"集中注意力與意象法","order":1,"content":"### 集中注意力\n準備一個喜愛的物體，如照片或圖片，或於腦中想像喜歡的顏色或感到愉悅的景象，當宮縮時將注意力集中於此，分散對宮縮的關注，進而減輕對疼痛的感受。\n\n### 呼吸技巧\n可藉由專注於緩慢呼吸幫助放鬆，或是採用特殊呼吸技巧改變節奏和模式來分散注意力。\n\n**呼吸模式**（找出最舒適的模式）：\n- 鼻子吸，鼻子吐\n- 鼻子吸，嘴巴吐\n- 嘴巴吸，嘴巴吐\n\n**呼吸節奏**：\n在待產過程中，每次宮縮的開始可以選擇廓清式呼吸，就像平時自然嘆息般的深呼吸。宮縮期間可以選擇用平常一半或兩倍的呼吸節奏呼吸。","suggestedQuestions":["拉梅茲呼吸法怎麼做？","什麼時候開始用呼吸減痛？","呼吸太快會怎樣？"]},{"id":"music","title":"音樂治療","order":2,"content":"在待產過程中可以聽自己喜歡的音樂，對於促進放鬆以及分散注意力都有幫助，若有宗教信仰，也可以播放佛樂、詩歌，能使媽媽感到充滿力量，增加自我控制力。","suggestedQuestions":["什麼音樂適合待產時聽？","音樂治療有效嗎？","可以帶耳機到產房嗎？"]},{"id":"massage","title":"按摩及重壓","order":3,"content":"利用觸覺的刺激可幫助放鬆及減輕疼痛。\n\n### 按撫法\n使用雙手掌輪流交替給予穩定壓力的上下撫摸，一手離開身體前，另一手接著撫摸，通常用於下腹部、背部或大腿，可達到放鬆肌肉並轉移注意力的效果。\n\n### 揉捏法\n四隻手指併攏抓住肌肉於指尖和手掌間，用溫和的力道擠壓、穩住再鬆開，通常用於頸部、肩膀、大腿及臀部來減輕壓力。\n\n### 重壓法\n使用手掌或拳頭的指關節，緩慢、強而持續的重壓尾骶骨，可緩解下背部疼痛。\n\n### 雙髖關節加壓\n將雙手放在媽媽的髂骨外側，宮縮時整個手掌往內按壓，透過反作用力釋放骨盆韌帶上的壓力，緩解宮縮過程的背痛。","suggestedQuestions":["待產時可以按摩哪些部位？","按摩力道要多大？","伴侶如何幫忙按摩？"]},{"id":"temperature","title":"冷溫熱敷","order":4,"content":"促進母體鬆弛、舒適以及減輕疼痛。\n\n### 冷敷\n降低肌肉溫度及緩解肌肉痙攣，當嚴重的骶骨處疼痛時可與重壓法同時或交互使用冰敷。若媽媽發燒、感到燥熱或正在流汗，伴侶可準備冷的溼毛巾或裝冰水的水瓶，擦拭臉或雙手達到降溫的效果。\n\n**注意**：當媽媽已感到寒冷時不建議使用。\n\n### 溫熱敷\n緩解肌肉缺血並增加不適區域的血流量，對於因應疲憊導致的背痛很有助益。當媽媽出現特定部位疼痛、肌肉緊繃或感到寒冷時，伴侶可準備溫熱濕毛巾或裝溫熱水的水瓶，敷在下腹部、腹股溝、大腿、下背、肩膀或會陰部。\n\n**注意**：當媽媽熱到難受或發燒時不建議使用。","suggestedQuestions":["冷敷和熱敷哪個比較好？","什麼時候用冷敷？","什麼時候用熱敷？"]},{"id":"positions","title":"姿位改變","order":5,"content":"待產階段，疼痛來自子宮收縮及骨盆壓力的增加，另外骨盆底肌肉、陰道與陰道口皮膚的拉撐也會造成疼痛，此時可藉由姿位的改變及進行特定的活動，以緩解疼痛及增加舒適度，並不斷改變骨盆腔的形狀及大小，進而協助寶寶找到適合自己方式通過產道。\n\n### 側臥\n- **純側臥**：可緩解痔瘡痛及寶寶心跳減速，促使寶寶枕後位旋轉至枕前位，適用於疲憊時或使用減痛分娩後。\n- **半俯臥**：好處同純側臥，另可提供重力。\n- **半俯臥弓箭步**：好處同半俯臥，另可改變骨盆形狀，使骨盆上半部有較多空間。\n\n### 坐姿\n- **半坐臥**：容易採用又可放鬆，相較於平躺可提供一些重力及增加骨盆入口寬度，適用於使用減痛分娩後。\n- **挺直坐立**：可提供重力，緩解背痛，方便溫熱敷或冷敷肩膀、下背及下腹部。\n- **坐姿前傾**：可提供重力，擴大骨盆入口，使寶寶與骨盆對正，可緩解背痛，也可促使寶寶枕後位旋轉至枕前位。\n\n### 站姿前傾\n可提供重力，相較於坐姿更可擴大骨盆入口，促使寶寶頭部屈曲與骨盆對正，配合搖晃可緩解宮縮痛及背痛，也可促使寶寶枕後位及枕橫位旋轉至枕前位。","suggestedQuestions":["待產時可以採什麼姿勢？","哪個姿勢最舒服？","為什麼要改變姿勢？"]}]}]}}]}]}]
+0:{"P":null,"b":"iHyuQJypp12tyBZjcfsFb","c":["","labor-knowledge","pain-relief",""],"q":"","i":false,"f":[[["",{"children":["labor-knowledge",{"children":[["section","pain-relief","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/maternal-ai-platform/_next/static/chunks/366c3bc3c9164715.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/maternal-ai-platform/_next/static/chunks/c2cce405223ad689.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/maternal-ai-platform/_next/static/chunks/76de27d4139bb6b8.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"zh-TW","children":["$","body",null,{"className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased","children":[["$","$L2",null,{}],["$","main",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"/maternal-ai-platform/_next/static/chunks/1da067024ce9f290.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/maternal-ai-platform/_next/static/chunks/9f3ff4861e1ddef6.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/maternal-ai-platform/_next/static/chunks/7ec504c60824965a.js","async":true,"nonce":"$undefined"}],["$","script","script-3",{"src":"/maternal-ai-platform/_next/static/chunks/c7d63a8723400ab9.js","async":true,"nonce":"$undefined"}],["$","script","script-4",{"src":"/maternal-ai-platform/_next/static/chunks/4d54c77eb20d3583.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$@a"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$@c"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$d",[]],"S":true}
+e:I[72192,["/maternal-ai-platform/_next/static/chunks/c2cce405223ad689.js","/maternal-ai-platform/_next/static/chunks/76de27d4139bb6b8.js","/maternal-ai-platform/_next/static/chunks/1da067024ce9f290.js","/maternal-ai-platform/_next/static/chunks/9f3ff4861e1ddef6.js","/maternal-ai-platform/_next/static/chunks/7ec504c60824965a.js","/maternal-ai-platform/_next/static/chunks/c7d63a8723400ab9.js","/maternal-ai-platform/_next/static/chunks/4d54c77eb20d3583.js"],"PageTracker"]
+f:I[16770,["/maternal-ai-platform/_next/static/chunks/c2cce405223ad689.js","/maternal-ai-platform/_next/static/chunks/76de27d4139bb6b8.js","/maternal-ai-platform/_next/static/chunks/1da067024ce9f290.js","/maternal-ai-platform/_next/static/chunks/9f3ff4861e1ddef6.js","/maternal-ai-platform/_next/static/chunks/7ec504c60824965a.js","/maternal-ai-platform/_next/static/chunks/c7d63a8723400ab9.js","/maternal-ai-platform/_next/static/chunks/4d54c77eb20d3583.js"],"KnowledgeArticle"]
+10:T14a0,待產階段，疼痛來自子宮收縮及骨盆壓力的增加，另外骨盆底肌肉、陰道與陰道口皮膚的拉撐也會造成疼痛，此時可藉由姿位的改變及進行特定的活動，以緩解疼痛及增加舒適度，並不斷改變骨盆腔的形狀及大小，進而協助寶寶找到適合自己方式通過產道。
+
+### （一）側臥
+
+**1. 純側臥**：可緩解痔瘡痛及寶寶心跳減速，促使寶寶枕後位（寶寶臉朝上）旋轉至枕前位（寶寶臉朝下），適用於疲憊時或使用減痛分娩後。
+
+![純側臥示範1](/maternal-ai-platform/images/labor/側臥(純側臥)圖十一.png)
+![純側臥示範2](/maternal-ai-platform/images/labor/側臥(純側臥)圖十二.png)
+![純側臥示範3](/maternal-ai-platform/images/labor/側臥(純側臥)圖十三.png)
+
+**2. 半俯臥**：好處同純側臥，另可提供重力。
+
+![半俯臥示範1](/maternal-ai-platform/images/labor/側臥(半俯臥)圖十四.png)
+![半俯臥示範2](/maternal-ai-platform/images/labor/側臥(半俯臥)圖十五.png)
+![半俯臥示範3](/maternal-ai-platform/images/labor/側臥(半俯臥)圖十六.png)
+
+**3. 半俯臥弓箭步**：好處同半俯臥，另可改變骨盆形狀，使骨盆上半部有較多空間。
+
+![半俯臥弓箭步示範](/maternal-ai-platform/images/labor/側臥(半俯臥弓箭步)圖十七.png)
+
+### （二）坐姿
+
+**1. 半坐臥**：容易採用又可放鬆，相較於平躺可提供一些重力及增加骨盆入口寬度，適用於使用減痛分娩後。
+
+![半坐臥示範1](/maternal-ai-platform/images/labor/坐姿(半坐臥)圖十八.png)
+![半坐臥示範2](/maternal-ai-platform/images/labor/坐姿(半坐臥)圖十九.png)
+![半坐臥示範3](/maternal-ai-platform/images/labor/坐姿(半坐臥)圖二十.png)
+
+**2. 挺直坐立**：可提供重力，緩解背痛，方便溫熱敷或冷敷肩膀、下背及下腹部。
+
+![挺直坐立示範1](/maternal-ai-platform/images/labor/坐姿(挺直坐立)圖二十一.png)
+![挺直坐立示範2](/maternal-ai-platform/images/labor/坐姿(挺直坐立)圖二十二.png)
+
+**3. 坐姿前傾**：可提供重力，擴大骨盆入口，使寶寶與骨盆對正，可緩解背痛，也可促使寶寶枕後位（寶寶臉朝上）旋轉至枕前位（寶寶臉朝下），方便伴侶按摩背部。
+
+![坐姿前傾示範](/maternal-ai-platform/images/labor/坐姿(坐姿前傾)圖二十三.png)
+
+### （三）站姿前傾
+可提供重力，相較於坐姿更可擴大骨盆入口，促使寶寶頭部屈曲與骨盆對正，配合搖晃可緩解宮縮痛及背痛，也可促使寶寶枕後位（寶寶臉朝上）及枕橫位（寶寶臉朝左或右）旋轉至枕前位（寶寶臉朝下）。
+
+![站姿前傾示範1](/maternal-ai-platform/images/labor/站姿前傾圖二十四.png)
+![站姿前傾示範2](/maternal-ai-platform/images/labor/站姿前傾圖二十五.png)
+![站姿前傾示範3](/maternal-ai-platform/images/labor/站姿前傾圖二十六.png)
+
+### （四）跪姿
+
+**1. 跪姿前傾**：好處同站姿前傾，另可緩解寶寶因臍帶壓迫造成的心跳減速，但可能導致膝蓋痠痛。
+
+![跪姿前傾示範1](/maternal-ai-platform/images/labor/跪姿(跪姿前傾)圖二十七.png)
+![跪姿前傾示範2](/maternal-ai-platform/images/labor/跪姿(跪姿前傾)圖二十八.png)
+![跪姿前傾示範3](/maternal-ai-platform/images/labor/跪姿(跪姿前傾)圖二十九.png)
+
+**2. 膝跪姿**：好處同跪姿前傾，另可緩解痔瘡痛，但可能導致手及膝蓋痠痛。
+
+![膝跪姿示範](/maternal-ai-platform/images/labor/跪姿(膝跪姿)圖三十.png)
+
+**3. 膝胸臥位**：當經歷頻繁、不規律且疼痛的宮縮，或是出現下背痛，子宮頸卻沒擴張時，可採用此體位藉由重力使寶寶退出骨盆，重新調整位置再次進入骨盆，好處同跪姿前傾，另可預防臍帶脫垂。
+
+![膝胸臥位示範1](/maternal-ai-platform/images/labor/跪姿(膝胸臥位)圖三十一.png)
+![膝胸臥位示範2](/maternal-ai-platform/images/labor/跪姿(膝胸臥位)圖三十二.png)
+
+### （五）蹲姿
+可提供重力，增加坐骨間的寬度進而擴大骨盆出口，促使寶寶下降，不由自主想用力的感覺也會增強，主要用於子宮頸全開後用力時。
+
+![蹲姿示範1](/maternal-ai-platform/images/labor/跪姿(蹲姿)圖三十三.png)
+![蹲姿示範2](/maternal-ai-platform/images/labor/跪姿(蹲姿)圖三十四.png)
+![蹲姿示範3](/maternal-ai-platform/images/labor/跪姿(蹲姿)圖三十五.png)
+
+### （六）不對稱直立
+提供重力，藉由往側邊抬高一側大腿，使坐骨外移以增加骨盆出口寬度，可緩解背痛，也可促使寶寶枕後位（寶寶臉朝上）旋轉至枕前位（寶寶臉朝下）。
+
+**1. 不對稱坐姿**
+
+![不對稱坐姿示範](/maternal-ai-platform/images/labor/不對稱直立(不對稱坐姿)圖三十六.png)
+
+**2. 不對稱跪姿**
+
+![不對稱跪姿示範1](/maternal-ai-platform/images/labor/不對稱直立(不對稱跪姿)圖三十七.png)
+![不對稱跪姿示範2](/maternal-ai-platform/images/labor/不對稱直立(不對稱跪姿)圖三十八.png)
+
+**3. 不對稱站姿**
+
+![不對稱站姿示範](/maternal-ai-platform/images/labor/不對稱直立(不對稱站姿)圖三十九.png)11:T85c,### 骨盆搖擺
+藉由左右、前後及繞圈的方式搖擺骨盆，可緩解背痛，且重力加上搖擺活動有助於鬆動寶寶的頭，促使枕後位（寶寶臉朝上）旋轉至枕前位（寶寶臉朝下）。
+
+![骨盆搖擺示範1](/maternal-ai-platform/images/labor/骨盆搖擺圖四十.png)
+![骨盆搖擺示範2](/maternal-ai-platform/images/labor/骨盆搖擺圖四十一.png)
+![骨盆搖擺示範3](/maternal-ai-platform/images/labor/骨盆搖擺圖四十二.png)
+![骨盆搖擺示範4](/maternal-ai-platform/images/labor/骨盆搖擺圖四十三.png)
+![骨盆搖擺示範5](/maternal-ai-platform/images/labor/骨盆搖擺圖四十四.png)
+![骨盆搖擺示範6](/maternal-ai-platform/images/labor/骨盆搖擺圖四十五.png)
+
+### 骨盆搖晃
+將布中單鋪在媽媽臀部上，於臀部兩側扭轉拉緊，一手往前拉，另一手往後拉，快速左右搖晃或抖動媽媽的臀部，好處同骨盆搖擺。
+
+![骨盆搖晃示範1](/maternal-ai-platform/images/labor/骨盆搖晃圖四十六.png)
+![骨盆搖晃示範2](/maternal-ai-platform/images/labor/骨盆搖晃圖四十七.png)
+
+### 膝跪姿屈曲
+呈跪姿，雙膝打開，身體往後，盡可能的屈曲臀部和膝蓋，能使骨盆前後打開，促進寶寶的頭下降。
+
+![膝跪姿屈曲示範1](/maternal-ai-platform/images/labor/膝跪姿屈曲圖四十八.png)
+![膝跪姿屈曲示範2](/maternal-ai-platform/images/labor/膝跪姿屈曲圖四十九.png)
+
+### 弓箭步
+抬高單腳踩於平面，身體保持直立往側邊移動，然後恢復直立，能使坐骨往外打開，增加骨盆的空間讓寶寶更容易改變姿勢。
+
+![弓箭步示範1](/maternal-ai-platform/images/labor/弓箭步圖五十.png)
+![弓箭步示範2](/maternal-ai-platform/images/labor/弓箭步圖五十一.png)
+
+### 跳慢舞
+靠在伴侶身上搖晃身體，利用地心引力及骨盆關節的些微改變，協助寶寶進入骨盆，與親密愛人擁抱能提升幸福感。
+
+![跳慢舞示範1](/maternal-ai-platform/images/labor/跳慢舞圖五十二.png)
+![跳慢舞示範2](/maternal-ai-platform/images/labor/跳慢舞圖五十三.png)5:["$","$Le",null,{"pageName":"待產知識 - 非藥物減痛方法","children":["$","div",null,{"className":"container py-8","children":["$","$Lf",null,{"article":{"id":"pain-relief","title":"非藥物減痛方法","slug":"pain-relief","category":"labor-knowledge","metadata":{"readTime":40,"lastUpdated":"2026-02-04","source":"衛生福利部國民健康署"},"sections":[{"id":"pain-relief","title":"非藥物減痛方法","order":3,"content":"待產過程中有多種非藥物方法可以幫助緩解疼痛，包括呼吸技巧、音樂治療、按摩、冷熱敷、姿位改變等。這些方法可以單獨使用或組合使用，找到最適合您的方式。","suggestedQuestions":["有哪些非藥物減痛方法？","哪種減痛方法最有效？","可以同時使用多種減痛方法嗎？"],"subsections":[{"id":"breathing","title":"集中注意力與意象法","order":1,"content":"### （一）集中注意力與意象法\n準備一個喜愛的物體，如照片或圖片，或於腦中想像喜歡的顏色或感到愉悅的景象，當宮縮時將注意力集中於此，分散對宮縮的關注，進而減輕對疼痛的感受。\n\n### （二）呼吸\n可藉由專注於緩慢呼吸幫助放鬆，或是採用特殊呼吸技巧改變節奏和模式來分散注意力。\n\n**1. 呼吸模式**（找出最舒適的模式）：\n- (1) 鼻子吸，鼻子吐\n- (2) 鼻子吸，嘴巴吐\n- (3) 嘴巴吸，嘴巴吐\n\n**2. 呼吸節奏**：\n在待產過程中，每次宮縮的開始可以選擇廓清式呼吸，就像平時自然嘆息般的深呼吸，宮縮期間可以選擇用平常一半或兩倍的呼吸節奏呼吸，例如：平常呼吸16次/分，宮縮期間可以選擇用8次/分或32次/分的節奏呼吸。宮縮達到最強烈時可加快，宮縮結束時再以廓清式呼吸收尾，媽媽可以透過宮縮找到適合自己的呼吸節奏。\n\n**3. 呼吸技巧**：\n- (1) 吸氣時數到一個目標數，吐氣時也要數到一樣的數，例如：吸氣12345，吐氣12345。\n- (2) 伴侶在旁可以用手指或聲音帶領媽媽，並提醒宮縮結束時恢復緩慢呼吸。\n- (3) 當呼吸太快或太深時，出現暈眩、嘴唇、手指、腳的麻刺感等過度換氣現象，將雙手拱成杯狀或拿一個袋子罩住口鼻以吸回呼出的二氧化碳，直到症狀緩解。","suggestedQuestions":["拉梅茲呼吸法怎麼做？","什麼時候開始用呼吸減痛？","呼吸太快會怎樣？"]},{"id":"music","title":"音樂治療","order":2,"content":"在待產過程中可以聽自己喜歡的音樂，對於促進放鬆以及分散注意力都有幫助，若有宗教信仰，也可以播放佛樂、詩歌，能使媽媽感到充滿力量，增加自我控制力。","suggestedQuestions":["什麼音樂適合待產時聽？","音樂治療有效嗎？","可以帶耳機到產房嗎？"]},{"id":"massage","title":"按摩及重壓","order":3,"content":"利用觸覺的刺激可幫助放鬆及減輕疼痛。\n\n### （一）按撫法\n使用雙手掌輪流交替給予穩定壓力的上下撫摸，一手離開身體前，另一手接著撫摸，通常用於下腹部、背部或大腿，可達到放鬆肌肉並轉移注意力的效果。\n\n![按撫法示範1](/maternal-ai-platform/images/labor/按撫法圖一.png)\n![按撫法示範2](/maternal-ai-platform/images/labor/按撫法圖二.png)\n\n### （二）揉捏法\n四隻手指併攏抓住肌肉於指尖和手掌間，用溫和的力道擠壓、穩住再鬆開，通常用於頸部、肩膀、大腿及臀部來減輕壓力。\n\n![揉捏法示範1](/maternal-ai-platform/images/labor/揉捏法圖三.png)\n![揉捏法示範2](/maternal-ai-platform/images/labor/揉捏法圖四.png)\n![揉捏法示範3](/maternal-ai-platform/images/labor/揉捏法圖五.png)\n\n### （三）重壓法\n使用手掌或拳頭的指關節，緩慢、強而持續的重壓尾骶骨，可緩解下背部疼痛。\n\n![重壓法示範1](/maternal-ai-platform/images/labor/重壓法圖六.png)\n![重壓法示範2](/maternal-ai-platform/images/labor/重壓法圖七.png)\n![重壓法示範3](/maternal-ai-platform/images/labor/重壓法圖八.png)\n\n### （四）雙髖關節加壓\n將雙手放在媽媽的髂骨外側，宮縮時整個手掌往內按壓，透過反作用力釋放骨盆韌帶上的壓力，緩解宮縮過程的背痛。\n\n![雙髖關節加壓示範1](/maternal-ai-platform/images/labor/雙髖關節加壓圖九.png)\n![雙髖關節加壓示範2](/maternal-ai-platform/images/labor/雙髖關節加壓圖十.png)","suggestedQuestions":["待產時可以按摩哪些部位？","按摩力道要多大？","伴侶如何幫忙按摩？"]},{"id":"temperature","title":"冷溫熱敷","order":4,"content":"促進母體鬆弛、舒適以及減輕疼痛。\n\n### （一）冷敷\n降低肌肉溫度及緩解肌肉痙攣，當嚴重的骶骨處疼痛時可與重壓法同時或交互使用冰敷。若媽媽發燒、感到燥熱或正在流汗，伴侶可準備冷的溼毛巾或裝冰水的水瓶，擦拭臉或雙手達到降溫的效果，也可放在前額、後頸或上胸部促進舒適、振作精神。\n\n**注意**：當媽媽已感到寒冷時不建議使用。\n\n### （二）溫熱敷\n緩解肌肉缺血並增加不適區域的血流量，對於因應疲憊導致的背痛很有助益。當媽媽出現特定部位疼痛、肌肉緊繃或感到寒冷時，伴侶可準備溫熱濕毛巾或裝溫熱水的水瓶，敷在下腹部、腹股溝、大腿、下背、肩膀或會陰部，可促進放鬆並減輕疼痛。\n\n**注意**：當媽媽熱到難受或發燒時不建議使用。","suggestedQuestions":["冷敷和熱敷哪個比較好？","什麼時候用冷敷？","什麼時候用熱敷？"]},{"id":"birth-ball","title":"生產球及花生球","order":5,"content":"### （一）生產球\n生產球是待產過程中活動和放鬆的絕佳輔具，生產球呈圓形，可以坐、跪趴或站著靠在生產球上輕輕搖晃身體。使用生產球的一開始可能會有點不穩，需要一手抓著床或伴侶，另一手固定生產球再坐上以避免跌倒，使用生產球時，可先鋪一層床墊、毛巾或毯子。\n\n![生產球示範1](/maternal-ai-platform/images/labor/生產球圖五十四.png)\n![生產球示範2](/maternal-ai-platform/images/labor/生產球圖五十五.png)\n![生產球示範3](/maternal-ai-platform/images/labor/生產球圖五十六.png)\n![生產球示範4](/maternal-ai-platform/images/labor/生產球圖五十七.png)\n![生產球示範5](/maternal-ai-platform/images/labor/生產球圖五十八.png)\n![生產球示範6](/maternal-ai-platform/images/labor/生產球圖五十九.png)\n![生產球示範7](/maternal-ai-platform/images/labor/生產球圖六十.png)\n\n### （二）花生球\n在側臥或半俯臥時，可選擇花生球支撐腿部，以維持促進產程的姿勢。\n\n![花生球示範1](/maternal-ai-platform/images/labor/花生球圖六十一.png)\n![花生球示範2](/maternal-ai-platform/images/labor/花生球圖六十二.png)","suggestedQuestions":["生產球怎麼使用？","花生球有什麼作用？","使用生產球安全嗎？"]},{"id":"positions","title":"姿位改變","order":6,"content":"$10","suggestedQuestions":["待產時可以採什麼姿勢？","哪個姿勢最舒服？","為什麼要改變姿勢？"]},{"id":"dynamic-activities","title":"動態活動","order":7,"content":"$11","suggestedQuestions":["骨盆搖擺怎麼做？","弓箭步有什麼好處？","跳慢舞可以幫助待產嗎？"]}]}]}}]}]}]
 a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-10:I[27201,["/maternal-ai-platform/_next/static/chunks/ff1a16fafef87110.js","/maternal-ai-platform/_next/static/chunks/64c0a5e3a0354479.js"],"IconMark"]
-c:[["$","title","0",{"children":"非藥物減痛方法 - 待產知識 - 產婦知識平台"}],["$","meta","1",{"name":"description","content":"待產過程中有多種非藥物方法可以幫助緩解疼痛，包括呼吸技巧、音樂治療、按摩、冷熱敷、姿位改變等。這些方法可以單獨使用或組合使用，找到最適合您的方式。"}],["$","link","2",{"rel":"icon","href":"/maternal-ai-platform/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L10","3",{}]]
+12:I[27201,["/maternal-ai-platform/_next/static/chunks/ff1a16fafef87110.js","/maternal-ai-platform/_next/static/chunks/64c0a5e3a0354479.js"],"IconMark"]
+c:[["$","title","0",{"children":"非藥物減痛方法 - 待產知識 - 產婦知識平台"}],["$","meta","1",{"name":"description","content":"待產過程中有多種非藥物方法可以幫助緩解疼痛，包括呼吸技巧、音樂治療、按摩、冷熱敷、姿位改變等。這些方法可以單獨使用或組合使用，找到最適合您的方式。"}],["$","link","2",{"rel":"icon","href":"/maternal-ai-platform/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L12","3",{}]]
 8:null
