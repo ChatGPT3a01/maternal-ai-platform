@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Clock, BookOpen } from 'lucide-react';
+import { ArrowRight, BookOpen } from 'lucide-react';
 import laborKnowledgeData from '@/data/knowledge/labor-knowledge.json';
 
 export const metadata = {
@@ -42,28 +42,23 @@ export default function LaborKnowledgePage() {
                           {section.title}
                         </CardTitle>
                         <CardDescription className="mt-2">
-                          {section.content.substring(0, 100)}...
+                          {section.content
+                            ? `${section.content.substring(0, 100)}...`
+                            : `包含 ${section.subsections?.length ?? 0} 個相關主題`}
                         </CardDescription>
                       </div>
                       <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors ml-2 flex-shrink-0" />
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                      {subsectionCount > 0 && (
-                        <>
-                          <div className="flex items-center gap-1">
-                            <BookOpen className="h-4 w-4" />
-                            <span>{subsectionCount} 個主題</span>
-                          </div>
-                          <span>•</span>
-                        </>
-                      )}
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        <span>約 8-10 分鐘閱讀</span>
+                    {subsectionCount > 0 && (
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                        <div className="flex items-center gap-1">
+                          <BookOpen className="h-4 w-4" />
+                          <span>{subsectionCount} 個主題</span>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </CardContent>
                 </Card>
               </Link>

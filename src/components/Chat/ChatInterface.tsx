@@ -108,12 +108,13 @@ export function ChatInterface({ initialQuestion, questionContext }: ChatInterfac
   };
 
   return (
-    <div className="flex h-[calc(100vh-4rem)] gap-4">
-      {/* Sidebar */}
-      <div className="w-64 flex-shrink-0 border-r">
-        <div className="p-4">
+    <div className="flex h-[calc(100vh-4rem)] gap-2 md:gap-4">
+      {/* Sidebar — 桌機顯示、手機隱藏，讓對話視窗有更多空間 */}
+      <div className="hidden md:flex md:w-48 lg:w-56 flex-shrink-0 border-r flex-col">
+        <div className="p-3">
           <Button
             className="w-full"
+            size="sm"
             onClick={createNewSession}
           >
             <Plus className="mr-2 h-4 w-4" />
@@ -121,8 +122,8 @@ export function ChatInterface({ initialQuestion, questionContext }: ChatInterfac
           </Button>
         </div>
 
-        <ScrollArea className="h-[calc(100%-8rem)]">
-          <div className="space-y-2 p-4 pt-0">
+        <ScrollArea className="flex-1">
+          <div className="space-y-1 px-3 pb-3">
             {sessions.map((session) => (
               <div
                 key={session.id}
@@ -149,9 +150,10 @@ export function ChatInterface({ initialQuestion, questionContext }: ChatInterfac
           </div>
         </ScrollArea>
 
-        <div className="p-4 border-t">
+        <div className="p-3 border-t">
           <Button
             variant="outline"
+            size="sm"
             className="w-full"
             onClick={() => setShowApiModal(true)}
           >
@@ -162,7 +164,22 @@ export function ChatInterface({ initialQuestion, questionContext }: ChatInterfac
       </div>
 
       {/* Chat Area */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col min-w-0">
+        {/* 手機版工具列：放新對話 / API 設定 */}
+        <div className="flex md:hidden items-center justify-between gap-2 px-3 py-2 border-b">
+          <Button size="sm" variant="outline" onClick={createNewSession}>
+            <Plus className="mr-1 h-4 w-4" />
+            新對話
+          </Button>
+          <Button
+            size="sm"
+            variant="ghost"
+            onClick={() => setShowApiModal(true)}
+          >
+            <Settings className="mr-1 h-4 w-4" />
+            API 設定
+          </Button>
+        </div>
         {/* Messages */}
         <ScrollArea className="flex-1 p-4" ref={scrollRef}>
           {!currentSession?.messages.length && !streamingMessage ? (
@@ -170,16 +187,15 @@ export function ChatInterface({ initialQuestion, questionContext }: ChatInterfac
               <Bot className="h-16 w-16 text-muted-foreground mb-4" />
               <h2 className="text-2xl font-semibold mb-2">產婦 AI 問答助理</h2>
               <p className="text-muted-foreground max-w-md">
-                您好！我是您的產婦衛教諮詢助理，可以回答關於孕期、待產、產後照護及新生兒照顧的問題。
+                您好！我是您的產婦衛教諮詢助理。
               </p>
               <div className="mt-6 grid gap-2">
                 <p className="text-sm text-muted-foreground">試試問我：</p>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {[
                     '什麼是真陣痛？',
-                    '產後如何照顧傷口？',
-                    '新生兒黃疸怎麼觀察？',
-                    '母乳哺餵有什麼好處？',
+                    '非藥物減痛方法？',
+                    '什麼是肌膚接觸？',
                   ].map((suggestion) => (
                     <Button
                       key={suggestion}
@@ -264,7 +280,7 @@ export function ChatInterface({ initialQuestion, questionContext }: ChatInterfac
               </Button>
             </div>
             <p className="text-xs text-muted-foreground mt-2 text-center">
-              此為衛教資訊，不能取代專業醫療診斷。如有緊急情況，請立即就醫。
+              此為衛教資訊，不能取代專業醫療診斷。
             </p>
           </form>
         </div>

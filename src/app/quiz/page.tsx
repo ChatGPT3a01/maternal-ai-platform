@@ -46,7 +46,7 @@ export default function QuizPage() {
                   <ul className="text-sm text-muted-foreground space-y-1">
                     <li>• 問卷不會記錄您的姓名與個人識別資料</li>
                     <li>• 作答內容僅供研究統計分析使用</li>
-                    <li>• 預計填寫時間：約 2-3 分鐘</li>
+                    <li>• 預計填寫時間：約 10 分鐘</li>
                   </ul>
                 </div>
                 <a

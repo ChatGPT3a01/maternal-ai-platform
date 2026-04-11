@@ -5,7 +5,6 @@ import { AskAIButton } from './AskAIButton';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useReadingProgress } from '@/hooks/useReadingProgress';
 import type { KnowledgeArticle as KnowledgeArticleType } from '@/types';
-import { Clock } from 'lucide-react';
 
 interface KnowledgeArticleProps {
   article: KnowledgeArticleType;
@@ -25,11 +24,6 @@ export function KnowledgeArticle({ article }: KnowledgeArticleProps) {
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-3">{article.title}</h1>
         <div className="flex items-center gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center gap-1">
-            <Clock className="h-4 w-4" />
-            <span>約 {article.metadata.readTime} 分鐘閱讀</span>
-          </div>
-          <span>•</span>
           <span>更新於 {article.metadata.lastUpdated}</span>
           <span>•</span>
           <span className="text-xs">{article.metadata.source}</span>
@@ -46,9 +40,11 @@ export function KnowledgeArticle({ article }: KnowledgeArticleProps) {
               </CardHeader>
               <CardContent className="space-y-6">
                 {/* 主要內容 */}
-                <div className="prose prose-slate dark:prose-invert max-w-none">
-                  <ReactMarkdown>{section.content}</ReactMarkdown>
-                </div>
+                {section.content && (
+                  <div className="prose prose-slate dark:prose-invert max-w-none">
+                    <ReactMarkdown>{section.content}</ReactMarkdown>
+                  </div>
+                )}
 
                 {/* 子章節 */}
                 {section.subsections && section.subsections.length > 0 && (
