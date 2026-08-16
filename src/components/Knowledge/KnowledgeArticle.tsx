@@ -10,6 +10,26 @@ interface KnowledgeArticleProps {
   article: KnowledgeArticleType;
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+/**
+ * 教材資料最初為 GitHub Pages 製作，因此圖片網址含有
+ * /maternal-ai-platform 前綴。Netlify 是部署在網域根路徑，需在
+ * Markdown 實際渲染時依部署目標正規化，避免所有教材圖片變成 404。
+ */
+function resolveContentUrl(url: string): string {
+  const assetPath = url.replace(/^\/maternal-ai-platform(?=\/images\/)/, '');
+
+  if (assetPath.startsWith('/images/')) {
+    return `${basePath}${assetPath}`;
+  }
+
+  return url;
+}
+
+const markdownUrlTransform = (url: string, key: string): string =>
+  key === 'src' ? resolveContentUrl(url) : url;
+
 export function KnowledgeArticle({ article }: KnowledgeArticleProps) {
   // 追蹤閱讀進度
   const { scrollDepth } = useReadingProgress({
@@ -42,7 +62,9 @@ export function KnowledgeArticle({ article }: KnowledgeArticleProps) {
                 {/* 主要內容 */}
                 {section.content && (
                   <div className="prose prose-slate dark:prose-invert max-w-none">
-                    <ReactMarkdown>{section.content}</ReactMarkdown>
+                    <ReactMarkdown urlTransform={markdownUrlTransform}>
+                      {section.content}
+                    </ReactMarkdown>
                   </div>
                 )}
 
@@ -55,7 +77,9 @@ export function KnowledgeArticle({ article }: KnowledgeArticleProps) {
                           {subsection.title}
                         </h3>
                         <div className="prose prose-slate dark:prose-invert max-w-none mb-4">
-                          <ReactMarkdown>{subsection.content}</ReactMarkdown>
+                          <ReactMarkdown urlTransform={markdownUrlTransform}>
+                            {subsection.content}
+                          </ReactMarkdown>
                         </div>
 
                         {/* 子章節的詢問 AI 按鈕 */}

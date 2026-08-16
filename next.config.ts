@@ -12,6 +12,12 @@ const nextConfig: NextConfig = {
   // 只有 GitHub Pages 部署時才需要 basePath（因為部署在 /maternal-ai-platform 子路徑）
   ...(isNetlify ? {} : { basePath: '/maternal-ai-platform' }),
 
+  // 提供給 Markdown 圖片渲染器，讓同一份教材可同時部署在
+  // Netlify 根路徑與 GitHub Pages 的 /maternal-ai-platform 子路徑。
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isNetlify ? '' : '/maternal-ai-platform',
+  },
+
   // 圖片優化配置（靜態匯出不支援 Next.js 圖片優化）
   images: {
     unoptimized: true,
