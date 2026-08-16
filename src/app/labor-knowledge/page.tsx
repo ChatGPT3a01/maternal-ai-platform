@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen } from 'lucide-react';
 import laborKnowledgeData from '@/data/knowledge/labor-knowledge.json';
 
@@ -13,11 +12,12 @@ export default function LaborKnowledgePage() {
   const sections = laborKnowledgeData.sections;
 
   return (
-    <div className="container py-8">
+    <div className="soft-section min-h-screen container py-10">
       <div className="max-w-4xl mx-auto">
         {/* 標題 */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-3">待產知識</h1>
+        <div className="mb-10">
+          <p className="mb-2 text-sm font-semibold tracking-wide text-pink-600">KNOWLEDGE HUB</p>
+          <h1 className="mb-3 text-4xl font-bold tracking-tight">待產知識</h1>
           <p className="text-lg text-muted-foreground">
             完整的待產知識指南，幫助您了解產兆、產程進展和各種減痛方法
           </p>
@@ -34,10 +34,11 @@ export default function LaborKnowledgePage() {
                 href={`/labor-knowledge/${section.id}/`}
                 className="block group"
               >
-                <Card className="h-full transition-all hover:shadow-lg hover:border-pink-200 dark:hover:border-pink-800">
+                <Card className="lift-card h-full transition-all hover:border-pink-200 dark:hover:border-pink-800">
                   <CardHeader>
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
+                        <span className="mb-3 inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-pink-50 px-2 text-xs font-semibold text-pink-600">{String(sections.indexOf(section) + 1).padStart(2, '0')}</span>
                         <CardTitle className="text-xl group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">
                           {section.title}
                         </CardTitle>

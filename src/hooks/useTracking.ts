@@ -14,7 +14,7 @@ export function useTracking() {
   }, []);
 
   // 記錄學習進度
-  const recordProgress = useCallback((percentage: number, metadata?: any) => {
+  const recordProgress = useCallback((percentage: number, metadata?: Record<string, unknown>) => {
     trackProgress(percentage, metadata);
   }, []);
 

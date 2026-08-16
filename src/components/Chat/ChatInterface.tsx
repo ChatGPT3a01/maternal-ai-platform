@@ -65,7 +65,8 @@ export function ChatInterface({ initialQuestion, questionContext }: ChatInterfac
   // Show API modal if not configured
   useEffect(() => {
     if (!configLoading && !isConfigured) {
-      setShowApiModal(true);
+      const timer = window.setTimeout(() => setShowApiModal(true), 0);
+      return () => window.clearTimeout(timer);
     }
   }, [configLoading, isConfigured]);
 
@@ -78,14 +79,17 @@ export function ChatInterface({ initialQuestion, questionContext }: ChatInterfac
       !isLoading &&
       currentSession
     ) {
-      setHasAutoSent(true);
-      sendMessage(initialQuestion);
+      const timer = window.setTimeout(() => {
+        setHasAutoSent(true);
+        sendMessage(initialQuestion);
 
-      // 記錄提問到追蹤系統
-      const context = questionContext?.context || questionContext?.sectionId || undefined;
-      recordQuestion(initialQuestion, context);
+        // 記錄提問到追蹤系統
+        const context = questionContext?.context || questionContext?.sectionId || undefined;
+        recordQuestion(initialQuestion, context);
+      }, 0);
+      return () => window.clearTimeout(timer);
     }
-  }, [initialQuestion, hasAutoSent, isConfigured, isLoading, currentSession, questionContext, recordQuestion]);
+  }, [initialQuestion, hasAutoSent, isConfigured, isLoading, currentSession, questionContext, recordQuestion, sendMessage]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

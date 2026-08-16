@@ -28,17 +28,19 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 w-full border-b border-pink-100/80 bg-background/85 shadow-sm backdrop-blur-xl supports-[backdrop-filter]:bg-background/65">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <Baby className="h-8 w-8 text-pink-500" />
+        <Link href="/" className="flex items-center gap-2 rounded-full pr-3 transition-opacity hover:opacity-80">
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-pink-100 ring-4 ring-pink-50">
+            <Baby className="h-5 w-5 text-pink-500" />
+          </span>
           <span className="font-bold text-xl hidden sm:inline">產婦知識平台</span>
           <span className="font-bold text-xl sm:hidden">產婦知識</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1 rounded-full bg-muted/60 p-1">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href;
@@ -50,7 +52,7 @@ export function Navbar() {
                   size="sm"
                   className={cn(
                     'gap-2',
-                    isActive && 'bg-pink-500 hover:bg-pink-600'
+                    isActive && 'bg-pink-500 text-white shadow-sm hover:bg-pink-600'
                   )}
                 >
                   <Icon className="h-4 w-4" />
@@ -79,7 +81,7 @@ export function Navbar() {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t">
-          <div className="container py-4 space-y-2">
+          <div className="container space-y-2 border-t border-pink-100/80 bg-background/95 py-4">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = pathname === item.href;

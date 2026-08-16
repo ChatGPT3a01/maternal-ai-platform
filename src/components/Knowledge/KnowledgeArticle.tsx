@@ -32,7 +32,7 @@ const markdownUrlTransform = (url: string, key: string): string =>
 
 export function KnowledgeArticle({ article }: KnowledgeArticleProps) {
   // 追蹤閱讀進度
-  const { scrollDepth } = useReadingProgress({
+  useReadingProgress({
     sectionId: article.id,
     sectionTitle: article.title,
     estimatedReadTime: article.metadata.readTime,

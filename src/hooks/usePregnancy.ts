@@ -19,9 +19,12 @@ export function usePregnancy() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const savedInfo = getPregnancyInfo();
-    setPregnancyInfoState(savedInfo);
-    setIsLoading(false);
+    const timer = window.setTimeout(() => {
+      const savedInfo = getPregnancyInfo();
+      setPregnancyInfoState(savedInfo);
+      setIsLoading(false);
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, []);
 
   const savePregnancyInfo = useCallback((info: PregnancyInfo) => {

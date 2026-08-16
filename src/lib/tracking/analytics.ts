@@ -107,7 +107,7 @@ export function getTrackingQueue(): TrackingQueue {
       add: () => {},
       syncNow: async () => {},
       stop: () => {},
-    } as any;
+    } as unknown as TrackingQueue;
   }
 
   if (!trackingQueueInstance) {
@@ -160,7 +160,7 @@ export function trackQuestion(question: string, context?: string) {
 }
 
 // 便利函式：記錄學習進度
-export function trackProgress(percentage: number, metadata?: any) {
+export function trackProgress(percentage: number, metadata?: Record<string, unknown>) {
   const queue = getTrackingQueue();
   queue.add({
     userId: getUserId(),

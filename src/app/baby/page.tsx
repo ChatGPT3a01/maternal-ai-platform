@@ -80,8 +80,11 @@ export default function BabyPage() {
 
   // Load records on mount
   useEffect(() => {
-    setBabyRecords(getBabyRecords());
-    setFeedingRecords(getFeedingRecords());
+    const timer = window.setTimeout(() => {
+      setBabyRecords(getBabyRecords());
+      setFeedingRecords(getFeedingRecords());
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, []);
 
   // Save growth record
@@ -396,7 +399,7 @@ export default function BabyPage() {
                         <label className="text-sm font-medium">餵食方式</label>
                         <Select
                           value={feedingType}
-                          onValueChange={(v) => setFeedingType(v as any)}
+                          onValueChange={(v) => setFeedingType(v as 'breastfeed' | 'formula' | 'mixed')}
                         >
                           <SelectTrigger>
                             <SelectValue />
@@ -414,7 +417,7 @@ export default function BabyPage() {
                             <label className="text-sm font-medium">餵食側</label>
                             <Select
                               value={feedingSide}
-                              onValueChange={(v) => setFeedingSide(v as any)}
+                              onValueChange={(v) => setFeedingSide(v as 'left' | 'right' | 'both')}
                             >
                               <SelectTrigger>
                                 <SelectValue />

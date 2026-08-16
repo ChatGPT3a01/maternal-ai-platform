@@ -14,7 +14,7 @@ export async function uploadToGoogleSheets(data: TrackingDataRow[]): Promise<voi
   }
 
   try {
-    const response = await fetch(WEBAPP_URL, {
+    await fetch(WEBAPP_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'text/plain', // Google Apps Script 需要
@@ -50,7 +50,7 @@ export async function testGoogleSheetsConnection(): Promise<boolean> {
       },
     ]);
     return true;
-  } catch (error) {
+  } catch {
     return false;
   }
 }

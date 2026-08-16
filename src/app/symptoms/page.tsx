@@ -111,7 +111,7 @@ const URGENT_SYMPTOMS = [
 ];
 
 export default function SymptomsPage() {
-  const { config, isConfigured, saveConfig, isLoading: configLoading } = useApiKey();
+  const { config, isConfigured, saveConfig } = useApiKey();
   const { sendMessage, isLoading, streamingMessage, currentSession } = useChat(config);
 
   const [selectedCategory, setSelectedCategory] = useState<SymptomCategory>('pregnancy');

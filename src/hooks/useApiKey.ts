@@ -35,10 +35,13 @@ export function useApiKey() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // 優先使用使用者在瀏覽器自行設定的 config；若無，則退回平台內建的預設 Key
-    const savedConfig = getAIConfig() ?? getDefaultConfigFromEnv();
-    setConfig(savedConfig);
-    setIsLoading(false);
+    const timer = window.setTimeout(() => {
+      // 優先使用使用者在瀏覽器自行設定的 config；若無，則退回平台內建的預設 Key
+      const savedConfig = getAIConfig() ?? getDefaultConfigFromEnv();
+      setConfig(savedConfig);
+      setIsLoading(false);
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, []);
 
   const saveConfig = useCallback((newConfig: AIConfig) => {

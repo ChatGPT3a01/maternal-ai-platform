@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Dialog,
   DialogContent,
@@ -90,7 +90,8 @@ export default function Home() {
     // 檢查是否首次訪問（是否顯示過廣告視窗）
     const hasSeenDialog = localStorage.getItem('maternal-show-pretest-dialog');
     if (!hasSeenDialog) {
-      setShowPretestDialog(true);
+      const timer = window.setTimeout(() => setShowPretestDialog(true), 0);
+      return () => window.clearTimeout(timer);
     }
   }, []);
 
@@ -109,13 +110,16 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-pink-950/20 dark:via-purple-950/20 dark:to-blue-950/20 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 py-20 dark:from-pink-950/20 dark:via-purple-950/20 dark:to-blue-950/20">
+        <div className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-pink-200/40 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-28 -left-16 h-64 w-64 rounded-full bg-blue-200/40 blur-3xl" />
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-pink-100 dark:bg-pink-900/30 mb-6">
+            <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-white/75 shadow-lg shadow-pink-200/50 ring-8 ring-white/40 dark:bg-pink-900/30">
               <Baby className="h-10 w-10 text-pink-600 dark:text-pink-400" />
             </div>
-            <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+            <p className="mb-3 text-sm font-semibold tracking-[0.25em] text-pink-600/80">安心待產．一步一步來</p>
+            <h1 className="mb-4 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-5xl font-bold text-transparent">
               Baby Landing
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
@@ -126,7 +130,7 @@ export default function Home() {
       </section>
 
       {/* 學習進度 */}
-      <section className="py-8 border-b">
+      <section className="soft-section border-b py-8">
         <div className="container">
           <div className="max-w-6xl mx-auto">
             <ProgressIndicator variant="detailed" />
@@ -138,7 +142,10 @@ export default function Home() {
       <section className="py-16">
         <div className="container">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">探索待產知識</h2>
+            <div className="mb-10 flex items-end justify-between gap-4">
+              <div><p className="mb-2 text-sm font-semibold text-pink-600">學習入口</p><h2 className="text-3xl font-bold">探索待產知識</h2></div>
+              <span className="hidden rounded-full bg-pink-50 px-3 py-1 text-sm text-pink-700 sm:inline-flex">4 個主題入口</span>
+            </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {mainFeatures.map((feature) => {
                 const colors = colorClasses[feature.color as keyof typeof colorClasses];
@@ -146,7 +153,7 @@ export default function Home() {
 
                 return (
                   <Link key={feature.title} href={feature.href} className="block group">
-                    <Card className={`h-full transition-all ${colors.border} ${colors.hover} hover:shadow-lg`}>
+                    <Card className={`lift-card h-full transition-all ${colors.border} ${colors.hover}`}>
                       <CardHeader>
                         <div className={`inline-flex p-3 rounded-lg ${colors.bg} mb-4`}>
                           <Icon className={`h-8 w-8 ${colors.icon}`} />

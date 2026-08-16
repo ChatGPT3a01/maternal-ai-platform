@@ -20,8 +20,8 @@ export function ProgressIndicator({ variant = 'compact' }: ProgressIndicatorProp
 
   useEffect(() => {
     // 初始載入進度
-    const currentProgress = getLearningProgress();
-    setProgress(currentProgress);
+    const loadProgress = () => setProgress(getLearningProgress());
+    const initialTimer = window.setTimeout(loadProgress, 0);
 
     // 監聽 localStorage 變化（跨 tab 同步）
     const handleStorageChange = (e: StorageEvent) => {
@@ -42,6 +42,7 @@ export function ProgressIndicator({ variant = 'compact' }: ProgressIndicatorProp
     return () => {
       window.removeEventListener('storage', handleStorageChange);
       clearInterval(interval);
+      window.clearTimeout(initialTimer);
     };
   }, []);
 

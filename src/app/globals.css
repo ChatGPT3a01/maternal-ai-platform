@@ -121,5 +121,23 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 12% 8%, oklch(0.97 0.035 350 / 0.7), transparent 28rem), radial-gradient(circle at 88% 18%, oklch(0.97 0.03 285 / 0.55), transparent 26rem);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .soft-section {
+    background-image: linear-gradient(to bottom, transparent, oklch(0.98 0.012 350 / 0.45));
+  }
+
+  .lift-card {
+    @apply rounded-2xl border-white/80 shadow-sm;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+
+  .lift-card:hover {
+    transform: translateY(-3px);
+    @apply shadow-lg;
   }
 }
